@@ -1,22 +1,23 @@
 /* Navbar base */
 .navbar {
-  background-color: #2563eb; /* Azul formal, llamativo */
-  color: white;
+  background-color: #ffffff; /* Blanco */
+  color: #000000;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 50;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: "Poppins", sans-serif;
 }
 
 /* Contenedor */
-.container {
-  max-width: 1200px;
+.navbar-container {
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0.8rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
 }
 
 /* Logo */
@@ -25,50 +26,57 @@
   align-items: center;
   gap: 0.5rem;
 }
+
 .logo {
-  max-width: 100%;   /* nunca supera el contenedor */
-  height: auto;      /* mantiene proporción */
-  display: block;    /* elimina espacios extra */
+  height: 40px; /* tamaño más pequeño */
+  width: auto;
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 700;
+  color: #0a0a0a;
 }
 
 /* Menú */
-nav {
+.nav-links {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 0.8rem;
 }
 
-/* Links */
+/* Links normales */
 .nav-link {
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: white;
+  text-decoration: none; /* ❌ Quitamos subrayado */
+  color: #000000;
   font-weight: 500;
-  border-radius: 5px;
+  font-size: 0.95rem;
+  padding: 0.45rem 0.9rem; /* más compacto */
+  border-radius: 6px;
   transition: all 0.3s ease;
 }
+
+/* Hover solo sobre el botón */
 .nav-link:hover {
-  background-color: #1d4ed8; /* Azul más oscuro al pasar el mouse */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  color: #2563eb;
+  background-color: rgba(37, 99, 235, 0.1); /* fondo azul suave */
 }
 
 /* Botón Donar */
 .btn-donar {
-  padding: 0.5rem 1.2rem;
-  background-color: #facc15; /* Amarillo llamativo */
-  color: black;
+  background-color: #2563eb; /* azul principal */
+  color: #ffffff;
   font-weight: 600;
+  padding: 0.45rem 1rem; /* más compacto */
   border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
 }
 .btn-donar:hover {
-  background-color: #eab308;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  background-color: #1e40af; /* azul más oscuro */
+  transform: scale(1.05);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
 }
 
 /* Botón hamburguesa */
@@ -77,30 +85,39 @@ nav {
   background: none;
   border: none;
   cursor: pointer;
-  color: white;
+}
+.icon-menu {
+  width: 28px;
+  height: 28px;
+  color: #000;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  nav {
+@media (max-width: 900px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .nav-links {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #2563eb;
+    background-color: #ffffff;
     flex-direction: column;
+    align-items: center;
     padding: 1rem 0;
     display: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
-  nav.open {
+
+  .nav-links.open {
     display: flex;
   }
-  .menu-btn {
-    display: block;
-  }
-  nav a, .btn-donar {
-    width: 90%;
-    margin: 0.25rem auto;
+
+  .nav-link, .btn-donar {
+    width: 80%; /* menos ancho, más estético */
     text-align: center;
+    margin: 0.3rem 0;
   }
 }
