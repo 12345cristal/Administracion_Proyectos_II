@@ -2,10 +2,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  imports: [],
-  templateUrl: './home.html',
-  styleUrl: './home.css'
+  standalone: true,
+  template: `
+    <h1>Bienvenida a Autismo Mochis 💙</h1>
+    <p>Apoyando con empatía, educación y tecnología.</p>
+  `
 })
-export class Home {
-
-}
+export class HomeComponent {}
