@@ -1,0 +1,12 @@
+.btn-donar {
+  @apply px-6 py-3 bg-autismYellow text-black rounded-lg font-semibold hover:bg-yellow-300 transition;
+}
+
+.btn-contact {
+  @apply px-6 py-3 bg-white text-autismBlue rounded-lg font-semibold hover:bg-gray-100 transition;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
