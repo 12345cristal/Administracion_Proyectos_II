@@ -1,26 +1,66 @@
-<section class="hero bg-gradient-to-r from-autismBlue to-autismPurple text-white flex flex-col justify-center items-center text-center py-32 px-4 md:px-0">
-  <h1 class="text-4xl md:text-6xl font-bold mb-4">Bienvenido a Autismo Mochis</h1>
-  <p class="text-lg md:text-2xl mb-6">Apoyando el desarrollo y bienestar de niños con autismo</p>
-  <div class="space-x-4">
-    <a routerLink="/donar" class="btn-donar">Donar</a>
-    <a routerLink="/contact" class="btn-contact">Contáctanos</a>
-  </div>
-</section>
+<div class="home-container flex flex-col items-center">
 
-<section class="services py-16 px-4 md:px-0 max-w-7xl mx-auto">
-  <h2 class="text-3xl font-bold text-center mb-10">Nuestros Servicios</h2>
-  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <div class="service-card p-6 rounded-lg shadow-md text-center bg-white text-black">
-      <h3 class="text-xl font-semibold mb-2">Terapias Personalizadas</h3>
-      <p>Programas adaptados a cada niño con seguimiento profesional.</p>
+  <!-- Sección Hero / Portada -->
+  <section class="hero w-full bg-blue-50 flex flex-col md:flex-row items-center justify-between p-6 md:p-12">
+    <!-- Texto principal -->
+    <div class="hero-text max-w-lg mb-6 md:mb-0">
+      <h1 class="text-3xl md:text-5xl font-bold text-blue-900 mb-4">
+        Bienvenido a Autismo Mochis
+      </h1>
+      <p class="text-gray-700 mb-6">
+        Apoyamos a niños con autismo y sus familias, ofreciendo terapias, recursos educativos y programas de inclusión.
+      </p>
+      <div class="flex gap-4">
+        <a routerLink="/about" class="btn-primary">Conócenos</a>
+        <a routerLink="/donar" class="btn-donar">Donar</a>
+      </div>
     </div>
-    <div class="service-card p-6 rounded-lg shadow-md text-center bg-white text-black">
-      <h3 class="text-xl font-semibold mb-2">Asistencia Escolar</h3>
-      <p>Apoyo académico y educativo para un aprendizaje integral.</p>
+
+    <!-- Imagen Hero -->
+    <div class="hero-image max-w-md">
+      <img src="assets/images/hero_autismo.png" alt="Niños jugando" class="rounded-lg shadow-lg object-cover w-full">
     </div>
-    <div class="service-card p-6 rounded-lg shadow-md text-center bg-white text-black">
-      <h3 class="text-xl font-semibold mb-2">Actividades Recreativas</h3>
-      <p>Estimulación y desarrollo social mediante juegos y talleres.</p>
+  </section>
+
+  <!-- Sección Información / Servicios -->
+  <section class="info-section w-full bg-white py-12 px-6 md:px-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">Nuestros Servicios</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="service-card p-6 bg-blue-50 rounded-lg shadow hover:shadow-lg transition">
+        <img src="assets/images/terapia.png" alt="Terapia" class="mx-auto mb-4 h-24 w-24">
+        <h3 class="text-xl font-semibold mb-2 text-center">Terapias Individuales</h3>
+        <p class="text-gray-600 text-center">Sesiones personalizadas para cada niño según sus necesidades.</p>
+      </div>
+      <div class="service-card p-6 bg-blue-50 rounded-lg shadow hover:shadow-lg transition">
+        <img src="assets/images/educacion.png" alt="Educación" class="mx-auto mb-4 h-24 w-24">
+        <h3 class="text-xl font-semibold mb-2 text-center">Recursos Educativos</h3>
+        <p class="text-gray-600 text-center">Material didáctico y actividades para mejorar habilidades cognitivas.</p>
+      </div>
+      <div class="service-card p-6 bg-blue-50 rounded-lg shadow hover:shadow-lg transition">
+        <img src="assets/images/familia.png" alt="Familia" class="mx-auto mb-4 h-24 w-24">
+        <h3 class="text-xl font-semibold mb-2 text-center">Apoyo a Familias</h3>
+        <p class="text-gray-600 text-center">Talleres y asesorías para padres y cuidadores.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- Sección Testimonios o Datos -->
+  <section class="stats-section w-full bg-blue-100 py-12 px-6 md:px-12">
+    <h2 class="text-2xl md:text-3xl font-bold text-center text-blue-900 mb-8">Impacto</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+      <div>
+        <h3 class="text-4xl font-bold text-blue-900 mb-2">120+</h3>
+        <p class="text-gray-700">Niños apoyados</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-blue-900 mb-2">50+</h3>
+        <p class="text-gray-700">Terapias realizadas</p>
+      </div>
+      <div>
+        <h3 class="text-4xl font-bold text-blue-900 mb-2">30+</h3>
+        <p class="text-gray-700">Familias beneficiadas</p>
+      </div>
+    </div>
+  </section>
+
+</div>
