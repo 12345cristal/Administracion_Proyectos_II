@@ -1,10 +1,11 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideRouter } from '@angular/router';
 import { AppComponent } from './app/app';
+import { importProvidersFrom } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes) // ✅ Aquí se activa el enrutamiento
+    importProvidersFrom(RouterModule.forRoot(routes))
   ]
-}).catch(err => console.error(err));
+});

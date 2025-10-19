@@ -1,12 +1,14 @@
 import { Routes } from '@angular/router';
+import { Routes } from './app.routes';
 
 // Componentes públicos
-import { HomeComponent } from './pages/public/home/home';
-import { AboutComponent } from './pages/public/about/about';
-import { ContactComponent } from './pages/public/contact/contact';
+import { HomeComponent } from './pages/public/home/home.component';
+import { AboutComponent } from './pages/public/about/about.component';
+import { ContactComponent } from './pages/public/contact/contact.component';
+import { DonarComponent } from './pages/public/donar/donar.component';
 
 // Componente de autenticación
-import { LoginComponent } from './pages/auth/login/login';
+import { LoginComponent } from './pages/auth/login/login.component';
 
 // Guardia de autenticación
 import { AuthGuard } from './core/guards/auth-guard';
@@ -15,7 +17,8 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'login', component: LoginComponent },
+    { path: 'donar', component: DonarComponent }, // ← nueva ruta
+{ path: 'login', component: LoginComponent },
 
   // 🔹 Lazy loading con AuthGuard
   {

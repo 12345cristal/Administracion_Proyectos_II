@@ -1,0 +1,223 @@
+/* ================= GENERAL ================= */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  background-color: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 2rem;
+}
+
+.hero-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.hero-text h1 {
+  color: #1e3a8a;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  color: #475569;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-top: 2rem; /* Baja la imagen */
+}
+
+.hero-image img:hover {
+  transform: scale(1.02);
+}
+
+/* ================= BOTONES ================= */
+.btn-primary,
+.btn-donar {
+  display: inline-block;
+  padding: 0.875rem 1.75rem;
+  border-radius: 0.625rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.3);
+}
+
+.btn-donar {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.btn-donar:hover {
+  background-color: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(239, 68, 68, 0.3);
+}
+
+/* ================= BOTONES HERO y CTA ================= */
+.hero-buttons,
+.cta-buttons {
+  display: flex;          /* Pone los botones en fila o columna */
+  flex-direction: column; /* En móvil: columna */
+  gap: 2.5rem;            /* Separación entre botones */
+  justify-content: center; 
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .hero-buttons,
+  .cta-buttons {
+    flex-direction: row;   /* En desktop: fila */
+    gap: 1.5rem;             /* Separación horizontal */
+  }
+}
+
+
+/* ================= INFO / SERVICIOS ================= */
+.info-section {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.info-section h2 {
+  font-size: 2.25rem;
+  color: #1e3a8a;
+  margin-bottom: 2.5rem;
+}
+
+.service-card {
+  background-color: #f0f9ff;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-card img {
+  height: 90px;
+  width: 90px;
+  margin-bottom: 1.25rem;
+}
+
+.service-card h3 {
+  color: #1e40af;
+  margin-bottom: 0.75rem;
+  font-size: 1.375rem;
+}
+
+.service-card p {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ================= IMPACTO / DATOS ================= */
+.stats-section {
+  background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.stats-section h2 {
+  font-size: 2.25rem;
+  color: #1e3a8a;
+  margin-bottom: 2.5rem;
+}
+
+.stats-section h3 {
+  font-size: 3.5rem;
+  color: #1e3a8a;
+  margin-bottom: 0.5rem;
+}
+
+.stats-section p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+/* ================= CTA FINAL ================= */
+.cta-section {
+  background-color: #ffffff;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: #475569;
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .hero { padding: 3rem 1.5rem; }
+  .info-section, .stats-section, .cta-section { padding: 3rem 1.5rem; }
+}
+
+@media (max-width: 768px) {
+  .hero { flex-direction: column; text-align: center; }
+  .hero-image img { width: 85%; margin-top: 2rem; }
+  .info-section { padding: 2.5rem 1rem; }
+  .service-card { margin-bottom: 2rem; }
+  .stats-section { padding: 3rem 1rem; }
+  .cta-section { padding: 3rem 1rem; }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 { font-size: 2rem; }
+  .service-card img { height: 80px; width: 80px; }
+}
