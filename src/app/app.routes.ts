@@ -17,15 +17,17 @@ import { LoginComponent } from './pages/auth/login/login.component';
 import { AuthGuard } from './core/guards/auth-guard';
 
 export const routes: Routes = [
+  // Rutas públicas
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'contact', component: ContactComponent }, // aquí se abrirá el ContactComponent standalone
   { path: 'donar', component: DonarComponent },
 
   // Rutas de terapias
-  { path: 'servicios-terapia', component: ServiciosListComponent },           // lista de terapias
-  { path: 'servicios-terapia/:id', component: ServicioDetailComponent },      // detalle de terapia con ID
+  { path: 'servicios-terapia', component: ServiciosListComponent },
+  { path: 'servicios-terapia/:nombre', component: ServicioDetailComponent },
 
+  // Login
   { path: 'login', component: LoginComponent },
 
   // Lazy loading con AuthGuard
@@ -78,7 +80,8 @@ export const routes: Routes = [
     canActivate: [AuthGuard]
   },
 
-  { path: '**', redirectTo: '', pathMatch: 'full' } // fallback
+  // Ruta fallback
+  { path: '**', redirectTo: '', pathMatch: 'full' }
 ];
 
 @NgModule({

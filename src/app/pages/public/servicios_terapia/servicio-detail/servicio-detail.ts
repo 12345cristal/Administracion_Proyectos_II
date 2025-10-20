@@ -1,4 +1,3 @@
-// src/app/pages/public/servicios_terapia/servicio-detail/servicio-detail.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -12,27 +11,24 @@ import { Servicio, ServicioService } from '../services/servicio';
   styleUrls: ['./servicio-detail.css']
 })
 export class ServicioDetailComponent implements OnInit {
-
-  servicio?: Servicio; // Servicio seleccionado
+  servicio?: Servicio;
 
   constructor(
-    private route: ActivatedRoute, // Para obtener parámetros de URL
-    private servicioService: ServicioService, // Servicio para traer los datos
-    public router: Router // Público para usarlo en template
+    private route: ActivatedRoute,
+    private servicioService: ServicioService,
+    public router: Router
   ) {}
 
-  ngOnInit() {
-    // Obtenemos el ID del servicio desde la URL
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.servicio = this.servicioService.getServicioById(id);
+ ngOnInit() {
+  const nombre = this.route.snapshot.paramMap.get('nombre')!;
+  this.servicio = this.servicioService.getServicios().find(s => s.nombre === nombre);
 
-    // Redirigimos si el servicio no existe
-    if (!this.servicio) {
-      this.router.navigate(['/servicios-terapia']);
-    }
+  if (!this.servicio) {
+    this.router.navigate(['/servicios-terapia']);
   }
+}
 
-  // Método para volver a la lista
+
   goBack() {
     this.router.navigate(['/servicios-terapia']);
   }

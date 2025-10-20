@@ -1,78 +1,73 @@
-/* Contenedor general */
-.servicios-list-container {
-  padding: 2rem;
-  font-family: 'Poppins', sans-serif;
+.servicios-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 2rem auto;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Título */
-.title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: #1e3a8a;
+.servicios-container h2 {
   text-align: center;
+  font-size: 2rem;
+  color: #1e3a8a;
   margin-bottom: 2rem;
 }
 
-/* Grid de cards */
-.cards-container {
+/* Grid adaptable */
+.servicios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
-/* Card individual */
-.card {
-  background-color: #ffffff;
+/* Tarjeta de cada servicio */
+.servicio-card {
+  background-color: #f9fafb;
   border-radius: 1rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-}
-
-/* Imagen de la card */
-.card-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-}
-
-/* Contenido de la card */
-.card-content {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
   padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.card-content h2 {
-  font-size: 1.5rem;
+.servicio-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Imagen de la tarjeta */
+.servicio-card img {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Nombre del servicio */
+.servicio-card h3 {
   color: #1e3a8a;
   margin-bottom: 0.5rem;
 }
 
-.card-content p {
-  color: #475569;
+/* Descripción */
+.servicio-card p {
   font-size: 0.95rem;
-  margin-bottom: 0.5rem;
+  color: #475569;
+  margin-bottom: 1rem;
 }
 
-/* Botón detalle */
-.btn-detail {
-  background-color: #3b82f6;
+/* Botón ver detalle */
+.btn-detalle {
+  display: inline-block;
+  background-color: #1e3a8a;
   color: #fff;
-  padding: 0.6rem 1.2rem;
-  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+  text-decoration: none;
   font-weight: 600;
-  border: none;
-  cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.btn-detail:hover {
-  background-color: #2563eb;
+.btn-detalle:hover {
+  background-color: #3b82f6;
   transform: translateY(-2px);
 }

@@ -1,0 +1,3 @@
+/* contacto-info.component.css */
+.contacto-info { display: flex; flex-direction: column; gap: 0.8rem; }
+.info-item i { margin-right: 0.5rem; color: #3b82f6; }
