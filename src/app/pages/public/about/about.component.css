@@ -1,0 +1,214 @@
+/* ==============================
+   ESTILOS GENERALES
+============================== */
+.about-container {
+  font-family: 'Poppins', 'Segoe UI', sans-serif; /* Tipografía limpia y profesional */
+  background-color: #f9fafb; /* Color de fondo suave, neutral para UX */
+  color: #1e293b; /* Color de texto principal */
+  padding: 4rem 2rem;
+  overflow-x: hidden; /* Evita scroll horizontal no deseado */
+}
+
+/* ==============================
+   HERO / INTRODUCCIÓN
+============================== */
+.about-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Permite que las columnas se acomoden en pantallas pequeñas */
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* ================= TEXTO DEL HERO ================= */
+.about-text {
+  flex: 1 1 500px;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e3a8a; /* Azul oscuro formal */
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.about-text h1 span {
+  display: block;
+  color: #3b82f6; /* Azul más brillante para resaltar subtítulo */
+  font-weight: 600;
+}
+
+.about-text p {
+  color: #475569; /* Gris oscuro para buena legibilidad */
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+}
+
+/* ================= IMÁGENES HERO ================= */
+/* Usamos un contenedor flex-column para mostrar imágenes de forma agradable */
+.about-image {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column; /* Una imagen sobre la otra en pantallas grandes */
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 2rem; /* <--- Esto baja todo el contenedor de imágenes */
+}
+
+/* Si quieres bajarlas individualmente, puedes hacer: */
+.about-image img {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 1.5rem;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-top: 1rem; /* <--- Esto baja cada imagen un poco */
+}
+
+/* Efecto hover para dar sensación de interactividad */
+.about-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* ==============================
+   Misión, Visión y Valores
+============================== */
+.mv-v-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f0f4ff 100%); /* Fondo suave y agradable */
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  margin-bottom: 4rem;
+  box-shadow: 0 5px 15px rgba(0, 60, 255, 0.05); /* Sombra muy ligera para resaltar */
+}
+
+.mv-item {
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.mv-item:hover {
+  transform: translateY(-5px); /* Efecto sutil al pasar el cursor */
+}
+
+.mv-item h2 {
+  color: #1e3a8a;
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.mv-item p,
+.mv-item ul {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.mv-item ul {
+  list-style: disc;
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+/* ==============================
+   HISTORIA
+============================== */
+.history-section {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.history-section h2 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+}
+
+.history-section p {
+  color: #475569;
+  font-size: 1.125rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   LLAMADO A LA ACCIÓN / DONAR
+============================== */
+.about-cta {
+  text-align: center;
+  background: linear-gradient(to right, #3b82f6, #2563eb); /* Gradiente azul atractivo */
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25); /* Sombra suave para resaltar sección */
+}
+
+.about-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-cta p {
+  font-size: 1.125rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+/* Botón donar */
+.btn-donar {
+  background-color: white;
+  color: #1e3a8a;
+  padding: 0.875rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.3);
+}
+
+.btn-donar:hover {
+  background-color: #f9fafb;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.4);
+}
+
+/* ==============================
+   RESPONSIVE
+============================== */
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text h1 {
+    font-size: 2.25rem;
+  }
+
+  .about-image {
+    flex-direction: row; /* Poner imágenes lado a lado en móvil */
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .about-image img {
+    width: 48%; /* Dos imágenes lado a lado ocupando 50% aprox */
+  }
+
+  .mv-v-section {
+    padding: 2rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-image img {
+    width: 100%; /* Una imagen por fila en pantallas muy pequeñas */
+  }
+}

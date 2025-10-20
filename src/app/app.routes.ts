@@ -1,11 +1,14 @@
-import { Routes } from '@angular/router';
-import { Routes } from './app.routes';
+// src/app/app.routes.ts
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
 
 // Componentes públicos
 import { HomeComponent } from './pages/public/home/home.component';
 import { AboutComponent } from './pages/public/about/about.component';
 import { ContactComponent } from './pages/public/contact/contact.component';
 import { DonarComponent } from './pages/public/donar/donar.component';
+import { ServiciosListComponent } from './pages/public/servicios_terapia/servicios-list/servicios-list';
+import { ServicioDetailComponent } from './pages/public/servicios_terapia/servicio-detail/servicio-detail';
 
 // Componente de autenticación
 import { LoginComponent } from './pages/auth/login/login.component';
@@ -17,10 +20,15 @@ export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
   { path: 'contact', component: ContactComponent },
-    { path: 'donar', component: DonarComponent }, // ← nueva ruta
-{ path: 'login', component: LoginComponent },
+  { path: 'donar', component: DonarComponent },
 
-  // 🔹 Lazy loading con AuthGuard
+  // Rutas de terapias
+  { path: 'servicios-terapia', component: ServiciosListComponent },           // lista de terapias
+  { path: 'servicios-terapia/:id', component: ServicioDetailComponent },      // detalle de terapia con ID
+
+  { path: 'login', component: LoginComponent },
+
+  // Lazy loading con AuthGuard
   {
     path: 'dashboard',
     loadChildren: () =>
@@ -70,5 +78,11 @@ export const routes: Routes = [
     canActivate: [AuthGuard]
   },
 
-  { path: '**', redirectTo: '', pathMatch: 'full' }
+  { path: '**', redirectTo: '', pathMatch: 'full' } // fallback
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}

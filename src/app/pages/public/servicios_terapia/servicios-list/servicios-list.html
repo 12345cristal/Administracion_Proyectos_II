@@ -1,0 +1,9 @@
+<div class="servicios-list">
+  <h2>Lista de Servicios</h2>
+  <div class="servicio-card" *ngFor="let servicio of servicios">
+    <img [src]="servicio.foto" [alt]="servicio.nombre" />
+    <h3>{{ servicio.nombre }}</h3>
+    <p>{{ servicio.descripcion }}</p>
+    <p><strong>Especialista:</strong> {{ servicio.especialista }}</p>
+  </div>
+</div>

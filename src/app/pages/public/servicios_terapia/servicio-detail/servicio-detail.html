@@ -1,0 +1,7 @@
+<div *ngIf="servicio" class="servicio-detail">
+  <h2>{{ servicio.nombre }}</h2>
+  <img [src]="servicio.foto" [alt]="servicio.nombre">
+  <p>{{ servicio.descripcion }}</p>
+  <p><strong>Especialista:</strong> {{ servicio.especialista }}</p>
+  <button (click)="goBack()" class="btn-volver">Volver</button>
+</div>

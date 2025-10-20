@@ -1,17 +1,23 @@
-/* ================= GENERAL ================= */
+/* ==============================
+   🌟 GENERAL / GLOBAL
+   ============================== */
+/* Define el diseño general y tipografía del home */
 .home-container {
   display: flex;
   flex-direction: column;
   width: 100%;
   font-family: 'Poppins', 'Segoe UI', sans-serif;
-  background-color: #f8fafc;
+  background-color: #f8fafc; /* Fondo claro para reducir fatiga visual */
   color: #1e293b;
   line-height: 1.6;
   padding: 0;
   margin: 0;
 }
 
-/* ================= HERO ================= */
+/* ==============================
+   💙 HERO PRINCIPAL
+   ============================== */
+/* Sección principal que da la primera impresión al usuario */
 .hero {
   min-height: 80vh;
   background: linear-gradient(135deg, #dbeafe 0%, #eff6ff 100%);
@@ -20,8 +26,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 4rem 2rem;
+  animation: fadeIn 1.2s ease-in-out;
 }
 
+/* Texto de bienvenida y descripción */
 .hero-text {
   flex: 1 1 500px;
   max-width: 600px;
@@ -33,6 +41,7 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  animation: slideInLeft 1s ease;
 }
 
 .hero-text p {
@@ -41,6 +50,7 @@
   margin-bottom: 1.5rem;
 }
 
+/* Imagen lateral que acompaña el hero */
 .hero-image {
   flex: 1 1 400px;
   display: flex;
@@ -53,15 +63,20 @@
   max-width: 420px;
   border-radius: 1rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  margin-top: 2rem; /* Baja la imagen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: 2rem; /* Baja la imagen un poco para centrar visualmente */
 }
 
+/* Efecto sutil al pasar el ratón */
 .hero-image img:hover {
-  transform: scale(1.02);
+  transform: scale(1.03);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* ================= BOTONES ================= */
+/* ==============================
+   🎯 BOTONES
+   ============================== */
+/* Define el estilo visual y animaciones de botones */
 .btn-primary,
 .btn-donar {
   display: inline-block;
@@ -72,6 +87,7 @@
   text-decoration: none;
   text-align: center;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -96,30 +112,34 @@
   box-shadow: 0 6px 20px rgba(239, 68, 68, 0.3);
 }
 
-/* ================= BOTONES HERO y CTA ================= */
+/* Contenedor de los botones */
 .hero-buttons,
 .cta-buttons {
-  display: flex;          /* Pone los botones en fila o columna */
-  flex-direction: column; /* En móvil: columna */
-  gap: 2.5rem;            /* Separación entre botones */
-  justify-content: center; 
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
   align-items: center;
 }
 
+/* En pantallas grandes, los botones se alinean horizontalmente */
 @media (min-width: 640px) {
   .hero-buttons,
   .cta-buttons {
-    flex-direction: row;   /* En desktop: fila */
-    gap: 1.5rem;             /* Separación horizontal */
+    flex-direction: row;
+    gap: 1.5rem;
   }
 }
 
-
-/* ================= INFO / SERVICIOS ================= */
+/* ==============================
+   💡 INFO / SERVICIOS
+   ============================== */
+/* Sección informativa donde se pueden listar objetivos o beneficios */
 .info-section {
   background-color: #ffffff;
   padding: 4rem 2rem;
   text-align: center;
+  animation: fadeInUp 1.2s ease-in-out;
 }
 
 .info-section h2 {
@@ -128,6 +148,7 @@
   margin-bottom: 2.5rem;
 }
 
+/* Tarjetas individuales */
 .service-card {
   background-color: #f0f9ff;
   padding: 2.5rem;
@@ -141,6 +162,7 @@
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
 }
 
+/* Imagen de icono o ilustración */
 .service-card img {
   height: 90px;
   width: 90px;
@@ -159,7 +181,9 @@
   line-height: 1.4;
 }
 
-/* ================= IMPACTO / DATOS ================= */
+/* ==============================
+   📊 IMPACTO / ESTADÍSTICAS
+   ============================== */
 .stats-section {
   background: linear-gradient(180deg, #e0f2fe 0%, #f0f9ff 100%);
   padding: 4rem 2rem;
@@ -183,11 +207,15 @@
   font-size: 1rem;
 }
 
-/* ================= CTA FINAL ================= */
+/* ==============================
+   🌈 CTA FINAL
+   ============================== */
+/* Última sección que invita al usuario a actuar */
 .cta-section {
   background-color: #ffffff;
   padding: 4rem 2rem;
   text-align: center;
+  animation: fadeIn 1s ease;
 }
 
 .cta-section h2 {
@@ -202,22 +230,67 @@
   margin-bottom: 2rem;
 }
 
-/* ================= RESPONSIVE ================= */
+/* ==============================
+   📱 RESPONSIVE DESIGN
+   ============================== */
 @media (max-width: 1024px) {
-  .hero { padding: 3rem 1.5rem; }
-  .info-section, .stats-section, .cta-section { padding: 3rem 1.5rem; }
+  .hero {
+    padding: 3rem 1.5rem;
+  }
+  .info-section,
+  .stats-section,
+  .cta-section {
+    padding: 3rem 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
-  .hero { flex-direction: column; text-align: center; }
-  .hero-image img { width: 85%; margin-top: 2rem; }
-  .info-section { padding: 2.5rem 1rem; }
-  .service-card { margin-bottom: 2rem; }
-  .stats-section { padding: 3rem 1rem; }
-  .cta-section { padding: 3rem 1rem; }
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image img {
+    width: 85%;
+    margin-top: 2rem;
+  }
+  .info-section {
+    padding: 2.5rem 1rem;
+  }
+  .service-card {
+    margin-bottom: 2rem;
+  }
+  .stats-section {
+    padding: 3rem 1rem;
+  }
+  .cta-section {
+    padding: 3rem 1rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .hero-text h1 { font-size: 2rem; }
-  .service-card img { height: 80px; width: 80px; }
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+  .service-card img {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+/* ==============================
+   ✨ ANIMACIONES SUAVES
+   ============================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
 }
