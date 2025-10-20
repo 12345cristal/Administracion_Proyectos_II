@@ -1,0 +1,18 @@
+.extras {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.extras a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.extras a:hover {
+  text-decoration: underline;
+}

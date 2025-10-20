@@ -1,4 +1,3 @@
-// src/app/pages/public/contact/contacto-info/contacto-info.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 

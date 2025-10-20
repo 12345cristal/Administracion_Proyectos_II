@@ -1,9 +1,14 @@
-<!-- contacto-form.component.html -->
-<form [formGroup]="contactForm" (ngSubmit)="enviarMensaje()">
-  <input formControlName="nombre" placeholder="Nombre completo">
-  <input formControlName="correo" type="email" placeholder="Correo electrónico">
-  <input formControlName="asunto" placeholder="Asunto (opcional)">
-  <textarea formControlName="mensaje" placeholder="Mensaje"></textarea>
-  <button type="submit" [disabled]="contactForm.invalid">Enviar mensaje</button>
+<form class="contact-form" (ngSubmit)="enviarFormulario()">
+  <h2>Envíanos un mensaje</h2>
+
+  <label for="nombre">Nombre</label>
+  <input id="nombre" type="text" [(ngModel)]="nombre" name="nombre" required />
+
+  <label for="correo">Correo</label>
+  <input id="correo" type="email" [(ngModel)]="correo" name="correo" required />
+
+  <label for="mensaje">Mensaje</label>
+  <textarea id="mensaje" [(ngModel)]="mensaje" name="mensaje" rows="4" required></textarea>
+
+  <button type="submit">Enviar</button>
 </form>
-<div *ngIf="mensajeEnviado" class="alert-success">Mensaje enviado correctamente</div>

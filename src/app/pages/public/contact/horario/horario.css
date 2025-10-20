@@ -1,0 +1,17 @@
+.horario-card {
+  background: #f8f9fa;
+  padding: 1.2rem;
+  border-radius: 12px;
+}
+
+.horario-card h2 {
+  color: #333;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  color: #555;
+}

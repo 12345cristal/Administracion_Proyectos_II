@@ -17,7 +17,7 @@ export class ServicioService {
 
   // Lista de terapias (simulando datos que podrían venir de un backend)
   private servicios: Servicio[] = [
-    { id: 1, nombre: 'Fisioterapia', descripcion: 'Terapias físicas especializadas para mejorar la motricidad y coordinación.', especialista: 'Arisbeth (Uadeo)', foto: 'assets/images/fisio_tera.jpeg' },
+    { id: 1, nombre: 'Fisioterapia', descripcion: 'Terapias físicas especializadas para mejorar la motricidad y coordinación.', especialista: 'Arisbeth Rodriguez Angulo (Uadeo)', foto: 'assets/images/fisio_tera.jpeg' },
     { id: 2, nombre: 'Neuroterapia', descripcion: 'Estimulación y rehabilitación neurológica para potenciar habilidades cognitivas.', especialista: 'Ana Lucía Cruz Solano (Uadeo)', foto: 'assets/images/neuro_tera.jpeg' },
     { id: 3, nombre: 'Lenguaje', descripcion: 'Intervención en comunicación y lenguaje para mejorar expresión y comprensión.', especialista: 'Judith', foto: 'assets/images/terapia_lenguaje.jpg' },
     { id: 4, nombre: 'Psicología', descripcion: 'Apoyo emocional y conductual para niños y jóvenes con TEA.', especialista: 'Jesús y Rocío', foto: 'assets/images/psico_tera.jpg' },

@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-extras',
   standalone: true,
   imports: [CommonModule],
-  template: `<p>Datos confidenciales. Conexión segura <i class="fa fa-lock"></i></p>`
+  templateUrl: './extras.html',
+  styleUrls: ['./extras.css']
 })
 export class ExtrasComponent {}
