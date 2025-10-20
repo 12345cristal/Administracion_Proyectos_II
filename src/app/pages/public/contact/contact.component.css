@@ -1,39 +1,38 @@
-/* Contenedor principal */
-.contact-container {
+.contact-wrapper {
   max-width: 1200px;
   margin: auto;
-  padding: 2rem;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-  font-family: 'Segoe UI', sans-serif;
+  padding: 3rem 1rem;
+  background: #fefefe;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
 }
 
-/* Título */
-.contact-container h1 {
+.page-title {
   text-align: center;
-  font-size: 2.2rem;
-  color: #333;
-  margin-bottom: 2rem;
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2.5rem;
 }
 
-/* Diseño adaptable */
-.contact-grid {
+/* Estructura */
+.contact-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Columnas */
-.left-column, .right-column {
+.contact-info-side,
+.contact-form-side {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-}
-
-/* Responsivo */
-@media (max-width: 900px) {
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
 }

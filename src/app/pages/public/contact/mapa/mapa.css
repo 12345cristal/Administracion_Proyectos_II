@@ -1,5 +1,11 @@
-.mapa-container {
-  border-radius: 12px;
+.map-card {
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  background: #f7f9fb;
+  padding: 1rem;
+}
+.map-card h2 {
+  margin-bottom: 0.8rem;
+  color: #007bff;
 }

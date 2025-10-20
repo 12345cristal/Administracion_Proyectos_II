@@ -1,18 +1,19 @@
 .info-card {
-  background: #f8f9fa;
-  border-radius: 12px;
-  padding: 1.5rem;
-  text-align: left;
+  background: #f7f9fb;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-left: 5px solid #007bff;
 }
 
 .info-card h2 {
-  color: #333;
   font-size: 1.4rem;
-  margin-bottom: 0.8rem;
+  color: #007bff;
+  margin-bottom: 1rem;
 }
 
-.info-card p {
-  color: #555;
-  margin: 0.3rem 0;
-  line-height: 1.5;
+.info-item {
+  color: #333;
+  margin: 0.5rem 0;
+  line-height: 1.4;
 }

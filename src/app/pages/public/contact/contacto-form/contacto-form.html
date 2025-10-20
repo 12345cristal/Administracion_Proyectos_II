@@ -1,14 +1,63 @@
-<form class="contact-form" (ngSubmit)="enviarFormulario()">
+<form class="contact-form" (ngSubmit)="confirmarEnvio()">
   <h2>Envíanos un mensaje</h2>
 
-  <label for="nombre">Nombre</label>
-  <input id="nombre" type="text" [(ngModel)]="nombre" name="nombre" required />
+  <div class="form-group">
+    <label for="nombre">Nombre</label>
+    <input 
+      id="nombre" 
+      type="text" 
+      [(ngModel)]="nombre" 
+      name="nombre" 
+      placeholder="Tu nombre completo" 
+      required>
+  </div>
 
-  <label for="correo">Correo</label>
-  <input id="correo" type="email" [(ngModel)]="correo" name="correo" required />
+  <div class="form-group">
+    <label for="correo">Correo</label>
+    <input 
+      id="correo" 
+      type="email" 
+      [(ngModel)]="correo" 
+      name="correo" 
+      placeholder="correo@ejemplo.com" 
+      required>
+  </div>
 
-  <label for="mensaje">Mensaje</label>
-  <textarea id="mensaje" [(ngModel)]="mensaje" name="mensaje" rows="4" required></textarea>
+  <div class="form-group">
+    <label for="telefono">Teléfono</label>
+    <input 
+      id="telefono" 
+      type="tel" 
+      [(ngModel)]="telefono" 
+      name="telefono" 
+      placeholder="(52) 668 123 4567">
+  </div>
 
-  <button type="submit">Enviar</button>
+  <div class="form-group">
+    <label for="mensaje">Mensaje</label>
+    <textarea 
+      id="mensaje" 
+      [(ngModel)]="mensaje" 
+      name="mensaje" 
+      rows="5" 
+      placeholder="Escribe tu mensaje aquí..." 
+      required>
+    </textarea>
+  </div>
+
+  <button type="submit" class="btn-enviar">Enviar</button>
+
+  <!-- Modal de confirmación -->
+  <div class="modal" *ngIf="mostrarConfirmacion">
+    <div class="modal-contenido">
+      <p>¿Deseas enviar tu mensaje?</p>
+      <button (click)="enviarFormulario()">Sí, enviar</button>
+      <button (click)="cancelarEnvio()">Cancelar</button>
+    </div>
+  </div>
+
+  <!-- Mensaje de éxito -->
+  <div class="mensaje-exito" *ngIf="mensajeEnviado">
+                 ¡Tu mensaje fue enviado con éxito!
+  </div>
 </form>

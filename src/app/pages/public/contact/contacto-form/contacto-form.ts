@@ -12,9 +12,28 @@ import { FormsModule } from '@angular/forms';
 export class ContactoFormComponent {
   nombre = '';
   correo = '';
+  telefono = '';
+
   mensaje = '';
+  mostrarConfirmacion = false;
+  mensajeEnviado = false;
+
+  confirmarEnvio() {
+    this.mostrarConfirmacion = true; // Abre el modal
+  }
+
+  cancelarEnvio() {
+    this.mostrarConfirmacion = false; // Cierra el modal
+  }
 
   enviarFormulario() {
-    alert(`Gracias ${this.nombre}, tu mensaje fue enviado con éxito.`);
+    this.mostrarConfirmacion = false;
+
+    // Aquí más adelante se conectará con tu backend FastAPI
+    // Ejemplo: this.http.post('http://localhost:8000/contacto', { nombre, correo, mensaje }).subscribe(...)
+
+    this.mensajeEnviado = true;
+
+    setTimeout(() => this.mensajeEnviado = false, 4000); // Desaparece después de 4s
   }
 }
