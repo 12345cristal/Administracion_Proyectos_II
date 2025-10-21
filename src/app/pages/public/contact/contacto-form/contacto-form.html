@@ -3,61 +3,36 @@
 
   <div class="form-group">
     <label for="nombre">Nombre</label>
-    <input 
-      id="nombre" 
-      type="text" 
-      [(ngModel)]="nombre" 
-      name="nombre" 
-      placeholder="Tu nombre completo" 
-      required>
+    <input id="nombre" type="text" [(ngModel)]="nombre" name="nombre" placeholder="Tu nombre completo" required>
   </div>
 
   <div class="form-group">
     <label for="correo">Correo</label>
-    <input 
-      id="correo" 
-      type="email" 
-      [(ngModel)]="correo" 
-      name="correo" 
-      placeholder="correo@ejemplo.com" 
-      required>
+    <input id="correo" type="email" [(ngModel)]="correo" name="correo" placeholder="correo@ejemplo.com" required>
   </div>
 
   <div class="form-group">
     <label for="telefono">Teléfono</label>
-    <input 
-      id="telefono" 
-      type="tel" 
-      [(ngModel)]="telefono" 
-      name="telefono" 
-      placeholder="(52) 668 123 4567">
+    <input id="telefono" type="tel" [(ngModel)]="telefono" name="telefono" placeholder="(52) 668 123 4567">
   </div>
 
   <div class="form-group">
     <label for="mensaje">Mensaje</label>
-    <textarea 
-      id="mensaje" 
-      [(ngModel)]="mensaje" 
-      name="mensaje" 
-      rows="5" 
-      placeholder="Escribe tu mensaje aquí..." 
-      required>
-    </textarea>
+    <textarea id="mensaje" [(ngModel)]="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
   </div>
 
-  <button type="submit" class="btn-enviar">Enviar</button>
+  <button type="submit" class="btn-enviar" [disabled]="enviando">Enviar</button>
 
-  <!-- Modal de confirmación -->
+  <!-- Modal -->
   <div class="modal" *ngIf="mostrarConfirmacion">
     <div class="modal-contenido">
       <p>¿Deseas enviar tu mensaje?</p>
-      <button (click)="enviarFormulario()">Sí, enviar</button>
+      <button (click)="enviarFormulario()" [disabled]="enviando">Sí, enviar</button>
       <button (click)="cancelarEnvio()">Cancelar</button>
     </div>
   </div>
-
-  <!-- Mensaje de éxito -->
-  <div class="mensaje-exito" *ngIf="mensajeEnviado">
-                 ¡Tu mensaje fue enviado con éxito!
+  <!-- Mensaje de error -->
+  <div class="mensaje-error" *ngIf="errorEnvio">
+    {{ errorEnvio }}
   </div>
 </form>
